@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Regist Form</title>
+    <script>
+        function showSubcategory() {
+            var category = document.getElementById("category").value;
+            var subcategory = document.getElementById("subcategory");
+
+            if (category === "category1") {
+                subcategory.innerHTML = "<option value='subcategory1'>Director</option><option value='subcategory2'>Production Designer</option><option value='subcategory3'>Screen Writer</option><option value='subcategory4'>Story Teller</option><option value='subcategory5'>Cinematographer</option><option value='subcategory6'>Choreographer</option><option value='subcategory7'>Editor</option><option value='subcategory8'>Composer</option><option value='subcategory9'>Special Effects Supervisor</option><option value='subcategory10'>Actors</option><option value='subcategory11'>Stunt Coordinator</option><option value='subcategory12'>Makeup Artist</option>";
+            }
+            else if (category === "category2") {
+                subcategory.innerHTML = "<option value='subcategory13'>Singer</option><option value='subcategory14'>Musician</option><option value='subcategory15'>lyricist</option><option value='subcategory16'>Recording Engineer</option><option value='subcategory17'>Mixing Engineer</option><option value='subcategory18'>Music Manager</option><option value='subcategory19'>Music Publisher</option><option value='subcategory20'>Sound Engineer</option><option value='subcategory21'>DJ</option><option value='subcategory22'>Music Producer</option>";
+            }
+            else if (category === "category3"){
+                subcategory.innerHTML = "<option value='subcategory23'>Editor</option><option value='subcategory24'>Photo Journalist</option><option value='subcategory25'>Camera Operator</option><option value='subcategory26'>Sound Technician</option><option value='subcategory27'>Lighting Technician</option><option value='subcategory28'>Graphic Designer</option><option value='subcategory29'>Social Media Manager</option><option value='subcategory30'>Public Realtions Specialist</option><option value='subcategory31'>Marketing Specialist</option><option value='subcategory32'>Content Creator</option><option value='subcategory33'>Media Analyst</option>";
+            }
+            else {
+                subcategory.innerHTML = "";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Registration Form</h2>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="category">Category:</label>
+        <select id="category" name="category" onchange="showSubcategory()" required>
+            <option value="">Select Category</option>
+            <option value="category1">Movies</option>
+            <option value="category2">Music</option>
+            <option value="category3">Mass Media</option>
+            <option value="category4">Opers</option>
+            <option value="category5">Performance Dut</option>
+            <option value="category6">Radio</option>
+            <option value="category7">Podeasts</option>
+            <option value="category8">Social Media</option>
+            <option value="category9">Theatre</option>
+            <option value="category10">Television</option>
+            <option value="category11">Story Telling</option>
+            <option value="category12">Open Mic Nights</option>
+            <option value="category13">Comedy Clubs</option>
+            <option value="category14">Magic Hours</option>
+            <option value="category15">Event Management</option>
+
+
+        </select><br><br>
+
+        <label for="subcategory">Subcategory:</label>
+        <select id="subcategory" name="subcategory" required>
+            <option value="">Select Subcategory</option>
+        </select><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+</body>
+
+</html>

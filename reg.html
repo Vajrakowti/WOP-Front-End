@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Entertainment Enrollment Form</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Entertainment Enrollment Form</h1>
+      <form action="#">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        
+        <label for="entertainment-type">Entertainment Type:</label>
+        <select id="entertainment-type" name="entertainment-type" required>
+          <option value="">Select one...</option>
+          <option value="musician">Musician</option>
+          <option value="dancer">Dancer</option>
+          <option value="actor">Actor</option>
+          <option value="podcast-host">Podcast Host</option>
+          <option value="magician">Magician</option>
+          <option value="storyteller">Storyteller</option>
+          <option value="influencer">Influencer</option>
+          <option value="radio-host">Radio Host</option>
+        </select>
+        
+        <label for="portfolio">Portfolio Link:</label>
+        <input type="text" id="portfolio" name="portfolio" required>
+        
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<script>
+		function showSubcategory() {
+			var category = document.getElementById("category").value;
+			var subcategory = document.getElementById("subcategory");
+
+			if(category === "category1") {
+				subcategory.innerHTML = "<option value='subcategory1'>Subcategory 1</option><option value='subcategory2'>Subcategory 2</option>";
+			}
+			else if(category === "category2") {
+				subcategory.innerHTML = "<option value='subcategory3'>Subcategory 3</option><option value='subcategory4'>Subcategory 4</option>";
+			}
+			else {
+				subcategory.innerHTML = "";
+			}
+		}
+	</script>
+</head>
+<body>
+	<h2>Registration Form</h2>
+	<form>
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required><br><br>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required><br><br>
+
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" required><br><br>
+
+		<label for="category">Category:</label>
+		<select id="category" name="category" onchange="showSubcategory()" required>
+			<option value="">Select Category</option>
+			<option value="category1">Movies</option>
+			<option value="category2">Music</option>
+		</select><br><br>
+
+		<label for="subcategory">Subcategory:</label>
+		<select id="subcategory" name="subcategory" required>
+			<option value="">Select Subcategory</option>
+		</select><br><br>
+
+		<input type="submit" value="Register">
+	</form>
+</body>
+</html>

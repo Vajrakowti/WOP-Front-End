@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+<head>
+	<title>Entertainment Department Registration Form</title>
+    <script>
+        function showSubcategory() {
+            var category = document.getElementById("category").value;
+            var subcategory = document.getElementById("subcategory");
+
+            if (category === "category1") {
+                subcategory.innerHTML = "<option value='subcategory1'>Director</option><option value='subcategory2'>Production Designer</option><option value='subcategory3'>Screen Writer</option><option value='subcategory4'>Story Teller</option><option value='subcategory5'>Cinematographer</option><option value='subcategory6'>Choreographer</option><option value='subcategory7'>Editor</option><option value='subcategory8'>Composer</option><option value='subcategory9'>Special Effects Supervisor</option><option value='subcategory10'>Actors</option><option value='subcategory11'>Stunt Coordinator</option><option value='subcategory12'>Makeup Artist</option>";
+            }
+            else if (category === "category2") {
+                subcategory.innerHTML = "<option value='subcategory13'>Singer</option><option value='subcategory14'>Musician</option><option value='subcategory15'>lyricist</option><option value='subcategory16'>Recording Engineer</option><option value='subcategory17'>Mixing Engineer</option><option value='subcategory18'>Music Manager</option><option value='subcategory19'>Music Publisher</option><option value='subcategory20'>Sound Engineer</option><option value='subcategory21'>DJ</option><option value='subcategory22'>Music Producer</option>";
+            }
+            else if (category === "category3"){
+                subcategory.innerHTML = "<option value='subcategory23'>Editor</option><option value='subcategory24'>Photo Journalist</option><option value='subcategory25'>Camera Operator</option><option value='subcategory26'>Sound Technician</option><option value='subcategory27'>Lighting Technician</option><option value='subcategory28'>Graphic Designer</option><option value='subcategory29'>Social Media Manager</option><option value='subcategory30'>Public Realtions Specialist</option><option value='subcategory31'>Marketing Specialist</option><option value='subcategory32'>Content Creator</option><option value='subcategory33'>Media Analyst</option>";
+            }
+            else if (category === "category4"){
+                subcategory.innerHTML =  "<option value='subcategory34'>Conductor</option><option value='subcategory35'>Stage Director</option><option value='subcategory36'>Music Director</option><option value='subcategory37'>Set Designer</option><option value='subcategory38'>Coustume Designer</option><option value='subcategory39'>Lighting Designer</option><option value='subcategory40'>Makeup Artist</option><option value='subcategory41'>Stage Manager</option>";
+            }
+            else if(category === "category5"){
+                subcategory.innerHTML =  "<option value='subcategory42'>Performance Artist</option><option value='subcategory43'>Art Administrator</option><option value='subcategory44'>Technical Director</option><option value='subcategory45'>Theatre Manager</option><option value='subcategory46'>Choreographer</option><option value='subcategory47'>Event Planner</option><option value='subcategory48'>Production Manager</option>";
+            }
+            else if (category === "category11"){
+                subcategory.innerHTML = "<option value='subcategory49'>Writer</option><option value='subcategory50'>Author</option><option value='subcategory51'>Screen Writer</option><option value='subcategory52'>Play Writer</option><option value='subcategory53'>Copy Writer</option><option value='subcategory54'>Poet</option><option value='subcategory55'>Narrator</option><option value='subcategory56'>Content Creator</option><option value='subcategory57'>Oral Storyteller</option><option value='subcategory58'>Tech Writer</option><option value='subcategory59'>Eidtion Editor</option>";
+            }
+            else if (category === "category15"){
+                subcategory.innerHTML = "<option value='subcategory60'>Standup Comedian</option>";
+            }
+            else {
+                subcategory.innerHTML = "";
+            }
+        }
+    </script>
+</head>
+<body>
+	<h1>Entertainment Department Registration Form</h1>
+	<form>
+		<h2>Personal Information</h2>
+		<label for="firstName">First Name:</label>
+		<input type="text" id="firstName" name="firstName"><br><br>
+		<label for="lastName">Last Name:</label>
+		<input type="text" id="lastName" name="lastName"><br><br>
+		<label for="emailAddress">Email Address:</label>
+		<input type="email" id="emailAddress" name="emailAddress"><br><br>
+		<label for="phoneNumber">Phone Number:</label>
+		<input type="tel" id="phoneNumber" name="phoneNumber"><br><br>
+		<label for="dob">Date of Birth:</label>
+		<input type="date" id="dob" name="dob"><br><br>
+
+		<h2>Address</h2>
+		<label for="streetAddress">Street Address:</label>
+		<input type="text" id="streetAddress" name="streetAddress"><br><br>
+		<label for="city">City:</label>
+		<input type="text" id="city" name="city"><br><br>
+		<label for="stateProvince">State/Province:</label>
+		<input type="text" id="stateProvince" name="stateProvince"><br><br>
+		<label for="zipCode">Zip/Postal Code:</label>
+		<input type="text" id="zipCode" name="zipCode"><br><br>
+		<label for="country">Country:</label>
+		<select id="country" name="country">
+            <option value="India">India</option>
+			<option value="Usa">USA</option>
+			<option value="Canada">Canada</option>
+			<option value="UK">UK</option>
+		</select><br><br>
+
+        <h2>Intrested In</h2>
+        <label for="category">Category:</label>
+        <select id="category" name="category" onchange="showSubcategory()" required>
+            <option value="">Select Category</option>
+            <option value="category1">Movies</option>
+            <option value="category2">Music</option>
+            <option value="category3">Mass Media</option>
+            <option value="category4">Opuas</option>
+            <option value="category5">Performance Art</option>
+            <option value="category6">Radio</option>
+            <option value="category7">Podeasts</option>
+            <option value="category8">Social Media</option>
+            <option value="category9">Theatre</option>
+            <option value="category10">Television</option>
+            <option value="category11">Story Teller</option>
+            <option value="category12">Open Mic Nights</option>
+            <option value="category13">Comedy Clubs</option>
+            <option value="category14">Magic Hours</option>
+            <option value="category15">Event Management</option>
+            <option value="category15">Comedy</option>
+            <option value="category15">Dance</option>
+        </select><br><br>
+
+        <label for="subcategory">Subcategory:</label>
+        <select id="subcategory" name="subcategory" required>
+            <option value="">Select Subcategory</option>
+
+        </select><br><br>
+
+		<h2>Social Media Handles</h2>
+		<label for="facebook">Facebook:</label>
+		<input type="text" id="facebook" name="facebook"><br><br>
+		<label for="twitter">Twitter:</label>
+		<input type="text" id="twitter" name="twitter"><br><br>
+		<label for="instagram">Instagram:</label>
+		<input type="text" id="instagram" name="instagram"><br><br>
+		<label for="linkedin">LinkedIn:</label>
+		<input type="text" id="linkedin" name="linkedin"><br><br>
+		<h2>Additional Information</h2>
+		<label for="currentlyEmployed">Are you currently employed?</label>
+		<input type="radio" id="currentlyEmployed" name="currentlyEmployed" value="yes">Yes
+		<input type="radio" id="currentlyEmployed" name="currentlyEmployed" value="no">No<br><br>
+		<label for="currentEmployer">If yes, where do you work?</label>
+		<input type="text" id="currentEmployer" name="currentEmployer"><br><br>
+		<label for="experience">Tell us about your experience in your selected categories:</label><br>
+		<textarea id="experience" name="experience"></textarea><br><br>
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
